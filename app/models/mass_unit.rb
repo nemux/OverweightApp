@@ -1,0 +1,2 @@
+class MassUnit < ApplicationRecord
+end

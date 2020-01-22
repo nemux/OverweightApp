@@ -1,0 +1,2 @@
+class RealMeasure < ApplicationRecord
+end
