@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_113953) do
     t.float "real_height", default: 0.0, null: false
     t.float "real_weight", default: 0.0, null: false
     t.float "real_total_weight", default: 0.0, null: false
-    t.integer "real_distance_unit_id", null: false
+    t.integer "real_distance_unit_id"
     t.integer "real_mass_unit_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_113953) do
   add_foreign_key "packages", "carriers"
   add_foreign_key "packages", "distance_units", column: "label_distance_unit_id"
   add_foreign_key "packages", "mass_units", column: "label_mass_unit_id"
+  add_foreign_key "real_measures", "distance_units", column: "real_distance_unit_id"
+  add_foreign_key "real_measures", "mass_units", column: "real_mass_unit_id"
   add_foreign_key "real_measures", "packages"
-  add_foreign_key "real_measures", "real_distance_units"
-  add_foreign_key "real_measures", "real_mass_units"
 end

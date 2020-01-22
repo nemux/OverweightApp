@@ -1,0 +1,34 @@
+<br/>
+<br/>
+<br/>
+<h1>Overweight Report</h1>
+<div class="x_content">
+  <table id="datatable-buttons" class="table table-striped table-bordered">
+    <thead>
+    <tr>
+      <th>Tracking Number</th>
+      <th>Platform weight</th>
+      <th>Label weight</th>
+      <th>Real weight</th>
+      <th>Real Overweight</th>
+      <th>Label Overweight</th>
+      <th>NO Overweight</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @packages.each do | package | %>
+    <tr>
+      <td><%= package[:tracking_number] %></td>
+      <td><%= package[:platform_total_weight] %></td>
+      <td><%= package[:label_total_weight] %></td>
+      <td><%= package[:real_weight] %></td>
+      <td><%= package[:real_overweight] %></td>
+      <td><%= package[:label_overweight] %></td>
+      <td class="<%= package[:no_overweight] ? 'checkmark' : 'crossmark'  %>"></td>
+    </tr>
+    <% end %>
+
+    </tbody>
+  </table>
+  <%= link_to 'Back', root_path %>
+</div>

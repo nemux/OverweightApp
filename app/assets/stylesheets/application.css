@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+#menu {
+    padding: 0;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li a {
+    font-family: Arial;
+    font-size: 11px;
+    text-decoration: none;
+    float: left;
+    padding: 10px;
+    background-color: #2175bc;
+    color: #fff;
+}
+
+#menu li a:hover {
+    background-color: #2586d7;
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+#notice {
+    clear: both;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
